@@ -1,0 +1,232 @@
+:root {
+    --accent: #5cc;
+    --primary: #eee;
+    --primary2: #ddd;
+    --primary3: #ccc;
+    --primary4: #bbb;
+    --secondary: #111;
+    --secondary2: #222;
+    --secondary3: #333;
+    --secondary4: #444;
+
+    --positive: #5e5;
+    --positive2: #5e9;
+    --neutral: #55e;
+    --neutral2: #59e;
+    --negative: #e55;
+    --negative2: #e95;
+
+    --focus: #444;
+    --active: #88e;
+    --hover: #8e8;
+    --selected: #666;
+    --focus-selected: #555;
+
+    --shadow: #000000f0;
+    --focus-shadow: #fff1;
+    --selected-shadow: #ffffff08;
+
+    --very-slow: 2000ms;
+    --slow: 400ms;
+    --medium: 200ms;
+    --fast: 100ms;
+    --very-fast: 50ms;
+}
+
+.lightTheme {
+    --accent: #588;
+    --primary: #111;
+    --primary2: #222;
+    --primary3: #333;
+    --primary4: #444;
+    --secondary: #eee;
+    --secondary2: #ddd;
+    --secondary3: #ccc;
+    --secondary4: #bbb;
+}
+
+html {
+    font-size: 50%;
+}
+
+#page {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content minmax(0, 1fr) min-content;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+@media only screen and (min-width: 600px) and (min-height: 600px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #page {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content minmax(0, 1fr);
+        grid-template-areas:
+            "header"
+            "footer"
+            "main";
+    }
+}
+
+@media only screen and (min-width: 900px) and (min-height: 900px) {
+    html { font-size: 75%; }
+}
+
+html {
+    height: 100%;
+    background: var(--secondary);
+}
+
+#body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#page {
+    height: 100%;
+    position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    display: grid;
+    overflow: hidden;
+}
+
+#preloader {
+    grid-area: 0/0/-1/-1;
+    background: var(--secondary);
+    z-index: 200;
+}
+
+#header {
+    grid-area: header;
+    background: var(--secondary);
+}
+
+    #logo {
+        height: 3.2rem;
+        width: 3.2rem;
+        margin: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #title {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 5rem;
+    }
+
+    #links {
+      vertical-align: top;
+      line-height: 5rem;
+      float: right;
+    }
+
+      #links p {
+         display: inline-block;
+      }
+
+#main {
+    grid-area: main;
+    background: var(--secondary);
+    overflow-y: auto;
+}
+
+    .section {
+
+    }
+
+    .sectionHeader {
+        position: relative;
+        padding-top: 3.2rem;
+        padding-bottom: 2.4rem;
+        width: 100%;
+        text-align: center;
+        background: var(--secondary2);
+    }
+
+    .listWrapper {
+        width: 100%;
+        height: 100%;
+        max-height: unset;
+    }
+
+    #tableList {
+        position: relative;
+        column-gap: 0.2rem;
+        max-height: unset;
+        column-width: 36rem;
+    }
+
+        #tableList .listHeader, #tableList .listItem {
+            padding: 1rem 2rem;
+            background: var(--secondary2);
+            -webkit-break-inside: avoid;
+            page-break-inside: avoid;
+                 break-inside: avoid;
+            transition-property: background;
+            transition-duration: var(--medium);
+        }
+
+        #tableList .listHeader {
+            z-index: 100;
+            padding: 0.5rem 2rem;
+            background: var(--secondary3);
+            pointer-events: all;
+            position: sticky;
+            top: -0.1rem;
+            column-span: all;
+        }
+
+        #tableList .listItem.selected {
+            background: var(--accent);
+        }
+        
+        #tableList .listItem.selected .tBody, #tableList .listItem.selected .tHeading5, #tableList .listItem.selected .icon.mini {
+            fill: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .badge {
+            position: relative;
+            border-radius: 2rem;
+            height: 4rem;
+            width: 4rem;
+            background: var(--secondary);
+        }
+
+        .badge span {
+            line-height: 4rem;
+            letter-spacing: 0.12em;
+            text-align: center;
+            position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+        }
+
+    #rowForm {
+        width: 100%;
+        padding: 4rem 6rem;
+    }
+
+#footer {
+    grid-area: footer;
+    height: 100%;
+    background: var(--secondary);
+    z-index: 100;
+}
+
+
+
+/* FIXES */
+#page {
+    min-height: unset;
+}

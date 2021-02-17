@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+   <head>
+      <title>Claims Dashboard</title>
+      <meta charset="UTF-8">
+      <meta name="author" content="Charles Jaye">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+      <link rel="icon" href="favicon.png">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap">
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+   </head>
+   <body id="body" style="overflow: hidden;">
+      <div id="page">
+         <div id="preloader"></div>
+         <header id="header" class="drop">
+            <img id="logo" src="favicon.png">
+            <h1 id="title" class="tHeading3">Claims Dashboard</h1>
+            <div id="links" class="m2R">
+               <a class="link tBody">Home</a>
+               <p class="pLR tBody"> > </p>
+               <a class="link tBody">Claims</a>
+               <p class="pLR tBody"> > </p>
+               <a class="tBody">Dashboard</a>
+            </div>
+            <div class="loader run"></div>
+         </header>
+         <footer id="footer">
+            <!-- <div id="actionsBasic" class="p2LR">
+               <div id="basicB" class="grid gC">
+                  <div class="selectBtnRoot tC">
+                     <label class="tLabel" for="selCategory">Category</label>
+                     <span class="tBody" role="presentation"></span>
+                     <select id="selCategory" class="selectBtn" tabindex="0">
+                     </select>
+                  </div>
+                  <button id="btnSort" class="valueBtn" type="button" data-on="Ascending" data-off="Descending" data-is-on="1" tabindex="0">
+                  <span class="tLabel">Sort</span>
+                  <span class="tBody"></span>
+                  </button>
+                  <div class="selectBtnRoot tC">
+                     <label class="tLabel" for="selFilter">Filter</label>
+                     <span class="tBody" role="presentation"></span>
+                     <select id="selFilter" class="selectBtn" multiple tabindex="0">
+                     </select>
+                  </div>
+               </div>
+               <div id="basicA" class="grid gC gCfmm">
+                  <input id="inpSearch" class="input tInput" type="text" placeholder="Search" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  <button id="btnClear" class="iconBtn mini" type="button" aria-label="Clear search" tabindex="0">
+                     <svg role="img">
+                        <use xlink:href="img/icons.svg#cross"></use>
+                     </svg>
+                  </button>
+                  <button id="btnSearch" class="iconBtn mini" type="button" aria-label="Submit search" tabindex="0">
+                     <svg role="img">
+                        <use xlink:href="img/icons.svg#search"></use>
+                     </svg>
+                  </button>
+               </div>
+               <button id="btnAdd" class="iconBtn" type="button" tabindex="0">
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#plus"></use>
+                  </svg>
+               </button>
+               <button id="btnMenu" class="iconBtn" type="button" tabindex="0">
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#list"></use>
+                  </svg>
+               </button>
+            </div>
+            <div id="actions" class="grid gC p2LR">
+               <button id="btnBack" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Back</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#back"></use>
+                  </svg>
+               </button>
+               <button id="btnEdit" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Edit</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#edit"></use>
+                  </svg>
+               </button>
+               <button id="btnEditBatch" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Batch edit</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#edit"></use>
+                  </svg>
+               </button>
+               <button id="btnSelectAll" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Select all</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#select"></use>
+                  </svg>
+               </button>
+               <button id="btnDelete" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Delete</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#delete"></use>
+                  </svg>
+               </button>
+               <button id="btnReset" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Revert</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#reset"></use>
+                  </svg>
+               </button>
+               <button id="btnSave" class="iconBtn mini" type="button" tabindex="0">
+                  <span class="tLabel">Save</span>
+                  <svg role="img">
+                     <use xlink:href="img/icons.svg#save"></use>
+                  </svg>
+               </button>
+            </div> -->
+         </footer>
+         <main id="main">
+            <!-- <section id="sectionTable" class="section grid gR gRmf" style="display: none;">
+               <h2 id="tableHeading" class="tHeading1 sectionHeader">Table</h2>
+               <div class="listWrapper">
+                  <ol id="tableList" tabindex="0">
+                     <li class="tHeading6 listHeader">A</li>
+                  </ol>
+               </div>
+            </section>
+            <section id="sectionRow" class="section grid gR gRmf" style="display: none;">
+               <h2 id="rowHeading" class="tHeading1 sectionHeader">Row</h2>
+               <form id="rowForm">
+                  <div id="inpRowFirstNameRoot" class="p2 pTB">
+                     <label class="tLabel" for="inpRowFirstName">First name</label>
+                     <input id="inpRowFirstName" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  </div>
+                  <div id="inpRowLastNameRoot" class="p2 pTB">
+                     <label class="tLabel" for="inpRowLastName">Last name</label>
+                     <input id="inpRowLastName" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  </div>
+                  <div id="inpRowJobTitleRoot" class="p2 pTB">
+                     <label class="tLabel" for="inpRowJobTitle">Job title</label>
+                     <input id="inpRowJobTitle" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  </div>
+                  <div id="inpRowEmailRoot" class="p2 pTB">
+                     <label class="tLabel" for="inpRowEmail">Email</label>
+                     <input id="inpRowEmail" class="input tInput" type="email" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  </div>
+                  <div id="selRowDepartmentRoot" class="selectBtnRoot tL p2 pTB">
+                     <label class="tLabel" for="selRowDepartment">Department</label>
+                     <span class="tBody" role="presentation"></span>
+                     <select id="selRowDepartment" class="selectBtn" tabindex="0">
+                     </select>
+                  </div>
+                  <div id="inpRowNameRoot" class="p2 pTB">
+                     <label class="tLabel" for="inpRowName">Name</label>
+                     <input id="inpRowName" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  </div>
+                  <div id="selRowLocationRoot" class="selectBtnRoot tL p2 pTB">
+                     <label class="tLabel" for="selRowLocation">Location</label>
+                     <span class="tBody" role="presentation"></span>
+                     <select id="selRowLocation" class="selectBtn" tabindex="0">
+                     </select>
+                  </div>
+               </form>
+            </section> -->
+         </main>
+      </div>
+      <script defer src="lib/jquery-3.5.1/jquery.min.js"></script>
+      <script defer src="js/index.js"></script>
+   </body>
+</html>
