@@ -4,5 +4,4 @@ node_modules/
 temp/
 Spec/
 templates.txt
-init.sql
 debug.log

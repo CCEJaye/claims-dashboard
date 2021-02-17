@@ -1,6 +1,6 @@
 
 (function(Data, $) {
-   Data.getAll = (onComplete = (response = {}) => { }) => {
+   Data.getAll = async (onComplete = (response = {}) => { }) => {
       const data = await Util.ajaxGet("php/request.php", {});
       onComplete(data);
    }

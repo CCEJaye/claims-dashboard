@@ -19,20 +19,6 @@
         }
         return str;
     }
-    
-    Generate.selectOptionsByParams = (fieldParams = {}) => {
-        const keys = Object.keys(fieldParams);
-        const table = State.toCommit.currentTable;
-        let str = "";
-        for (let i = 0; i < keys.length; i++) {
-            const key = keys[i];
-            const field = State.parameters[table][key];
-            if (field.categorised) {
-                str += `<option value="`+key+`">`+field.display+`</option>`;
-            }
-        }
-        return str;
-    }
 
     Generate.validateText = (value = "", param = {}, table = "", key = "", blankIsError = true, itemIds = []) => {
         const errs = [];

@@ -4,6 +4,8 @@
         $(".selectBtn").on("change", function() {
             const childCount = $(this).children("option").length;
             const selected = $(this).val();
+            console.log(selected);
+            console.log(childCount);
             let value = "";
             if (!Array.isArray(selected)) {
                 value = $(this).children(`option[value="` + selected + `"]`).html() || selected;
@@ -65,7 +67,11 @@
 
     Comps.updateSelect = (selector = "", values = [], selected = []) => {
         const ele = $(selector);
+        console.log(ele);
         ele.html(values).val(selected).trigger("change");
+        console.log(selector);
+        console.log(values);
+        console.log(selected);
     }
 
     Comps.setToggle = (selector = "", isOn = true) => {

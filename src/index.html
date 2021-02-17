@@ -28,6 +28,27 @@
             <div class="loader run"></div>
          </header>
          <footer id="footer">
+            <div class="grid gC">
+               <div class="selectBtnRoot tC">
+                  <label class="tLabel" for="selBlameType">Blame Type</label>
+                  <span class="tBody" role="presentation"></span>
+                  <select id="selBlameType" class="selectBtn" tabindex="0">
+                  </select>
+               </div>
+               <div class="selectBtnRoot tC">
+                  <label class="tLabel" for="selScheme">Scheme</label>
+                  <span class="tBody" role="presentation"></span>
+                  <select id="selScheme" class="selectBtn" tabindex="0">
+                  </select>
+               </div>
+               <div class="selectBtnRoot tC">
+                  <label class="tLabel" for="selPeriod">Period</label>
+                  <span class="tBody" role="presentation"></span>
+                  <select id="selPeriod" class="selectBtn" tabindex="0">
+                  </select>
+               </div>
+            </div>
+            <div>
             <!-- <div id="actionsBasic" class="p2LR">
                <div id="basicB" class="grid gC">
                   <div class="selectBtnRoot tC">
@@ -116,7 +137,20 @@
                </button>
             </div> -->
          </footer>
-         <main id="main">
+         <main id="main" class="grid">
+            <div id="mainContainer">
+               <ol id="tableList" tabindex="0">
+                  <li class="tHeading6 listHeader">Total From Start</li>
+                  <li class="tHeading6 listHeader">Brought Forward</li>
+                  <li class="tHeading6 listHeader">New Claims</li>
+                  <li class="tHeading6 listHeader">Prev. Backlog</li>
+                  <li class="tHeading6 listHeader">Re-Opened in Month</li>
+                  <li class="tHeading6 listHeader">Closed</li>
+                  <li class="tHeading6 listHeader">Carried Forward</li>
+                  <li class="tHeading6 listHeader">Settled at £nil (Closed)</li>
+                  <li class="tHeading6 listHeader">Settled Claims (Closed)</li>
+               </ol>
+            </div>
             <!-- <section id="sectionTable" class="section grid gR gRmf" style="display: none;">
                <h2 id="tableHeading" class="tHeading1 sectionHeader">Table</h2>
                <div class="listWrapper">
