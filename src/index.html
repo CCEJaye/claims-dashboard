@@ -12,193 +12,126 @@
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap">
       <link rel="stylesheet" type="text/css" href="css/index.css">
    </head>
-   <body id="body" style="overflow: hidden;">
+   <body id="body">
       <div id="page">
          <div id="preloader"></div>
+
          <header id="header" class="drop">
             <img id="logo" src="favicon.png">
             <h1 id="title" class="tHeading3">Claims Dashboard</h1>
-            <div id="links" class="m2R">
-               <a class="link tBody">Home</a>
+            <div id="links" class="p2R">
+               <a class="link tBody" tabindex="0">Home</a>
                <p class="pLR tBody"> > </p>
-               <a class="link tBody">Claims</a>
+               <a class="link tBody" tabindex="0">Claims</a>
                <p class="pLR tBody"> > </p>
                <a class="tBody">Dashboard</a>
             </div>
             <div class="loader run"></div>
          </header>
-         <footer id="footer">
+
+         <footer id="footer" class="widthContainer">
             <div class="grid gC">
-               <div class="selectBtnRoot tC">
-                  <label class="tLabel" for="selBlameType">Blame Type</label>
-                  <span class="tBody" role="presentation"></span>
-                  <select id="selBlameType" class="selectBtn" tabindex="0">
-                  </select>
-               </div>
-               <div class="selectBtnRoot tC">
-                  <label class="tLabel" for="selScheme">Scheme</label>
-                  <span class="tBody" role="presentation"></span>
-                  <select id="selScheme" class="selectBtn" tabindex="0">
-                  </select>
-               </div>
-               <div class="selectBtnRoot tC">
-                  <label class="tLabel" for="selPeriod">Period</label>
-                  <span class="tBody" role="presentation"></span>
-                  <select id="selPeriod" class="selectBtn" tabindex="0">
-                  </select>
-               </div>
-            </div>
-            <div>
-            <!-- <div id="actionsBasic" class="p2LR">
-               <div id="basicB" class="grid gC">
                   <div class="selectBtnRoot tC">
-                     <label class="tLabel" for="selCategory">Category</label>
+                     <label class="tLabel" for="selBlameType">Blame Type</label>
                      <span class="tBody" role="presentation"></span>
-                     <select id="selCategory" class="selectBtn" tabindex="0">
+                     <select id="selBlameType" class="selectBtn" tabindex="0">
                      </select>
                   </div>
-                  <button id="btnSort" class="valueBtn" type="button" data-on="Ascending" data-off="Descending" data-is-on="1" tabindex="0">
-                  <span class="tLabel">Sort</span>
-                  <span class="tBody"></span>
-                  </button>
                   <div class="selectBtnRoot tC">
-                     <label class="tLabel" for="selFilter">Filter</label>
+                     <label class="tLabel" for="selScheme">Scheme</label>
                      <span class="tBody" role="presentation"></span>
-                     <select id="selFilter" class="selectBtn" multiple tabindex="0">
+                     <select id="selScheme" class="selectBtn" tabindex="0">
+                     </select>
+                  </div>
+                  <div class="selectBtnRoot tC">
+                     <label class="tLabel" for="selPeriod">Period</label>
+                     <span class="tBody" role="presentation"></span>
+                     <select id="selPeriod" class="selectBtn" tabindex="0">
                      </select>
                   </div>
                </div>
-               <div id="basicA" class="grid gC gCfmm">
-                  <input id="inpSearch" class="input tInput" type="text" placeholder="Search" autocapitalize="off" autocomplete="empty" tabindex="0">
-                  <button id="btnClear" class="iconBtn mini" type="button" aria-label="Clear search" tabindex="0">
-                     <svg role="img">
-                        <use xlink:href="img/icons.svg#cross"></use>
-                     </svg>
-                  </button>
-                  <button id="btnSearch" class="iconBtn mini" type="button" aria-label="Submit search" tabindex="0">
-                     <svg role="img">
-                        <use xlink:href="img/icons.svg#search"></use>
-                     </svg>
-                  </button>
-               </div>
-               <button id="btnAdd" class="iconBtn" type="button" tabindex="0">
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#plus"></use>
-                  </svg>
-               </button>
-               <button id="btnMenu" class="iconBtn" type="button" tabindex="0">
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#list"></use>
-                  </svg>
-               </button>
-            </div>
-            <div id="actions" class="grid gC p2LR">
-               <button id="btnBack" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Back</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#back"></use>
-                  </svg>
-               </button>
-               <button id="btnEdit" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Edit</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#edit"></use>
-                  </svg>
-               </button>
-               <button id="btnEditBatch" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Batch edit</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#edit"></use>
-                  </svg>
-               </button>
-               <button id="btnSelectAll" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Select all</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#select"></use>
-                  </svg>
-               </button>
-               <button id="btnDelete" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Delete</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#delete"></use>
-                  </svg>
-               </button>
-               <button id="btnReset" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Revert</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#reset"></use>
-                  </svg>
-               </button>
-               <button id="btnSave" class="iconBtn mini" type="button" tabindex="0">
-                  <span class="tLabel">Save</span>
-                  <svg role="img">
-                     <use xlink:href="img/icons.svg#save"></use>
-                  </svg>
-               </button>
-            </div> -->
          </footer>
-         <main id="main" class="grid">
-            <div id="mainContainer">
-               <ol id="tableList" tabindex="0">
-                  <li class="tHeading6 listHeader">Total From Start</li>
-                  <li class="tHeading6 listHeader">Brought Forward</li>
-                  <li class="tHeading6 listHeader">New Claims</li>
-                  <li class="tHeading6 listHeader">Prev. Backlog</li>
-                  <li class="tHeading6 listHeader">Re-Opened in Month</li>
-                  <li class="tHeading6 listHeader">Closed</li>
-                  <li class="tHeading6 listHeader">Carried Forward</li>
-                  <li class="tHeading6 listHeader">Settled at £nil (Closed)</li>
-                  <li class="tHeading6 listHeader">Settled Claims (Closed)</li>
-               </ol>
-            </div>
-            <!-- <section id="sectionTable" class="section grid gR gRmf" style="display: none;">
-               <h2 id="tableHeading" class="tHeading1 sectionHeader">Table</h2>
-               <div class="listWrapper">
-                  <ol id="tableList" tabindex="0">
-                     <li class="tHeading6 listHeader">A</li>
-                  </ol>
+
+         <main id="main">
+            <div class="widthContainer overflowY drop">
+               <div id="chartContainer">
+                  <canvas id="chart"></canvas>
                </div>
-            </section>
-            <section id="sectionRow" class="section grid gR gRmf" style="display: none;">
-               <h2 id="rowHeading" class="tHeading1 sectionHeader">Row</h2>
-               <form id="rowForm">
-                  <div id="inpRowFirstNameRoot" class="p2 pTB">
-                     <label class="tLabel" for="inpRowFirstName">First name</label>
-                     <input id="inpRowFirstName" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+               <div class="flex p">
+                  <div class="card drop">
+                     <h3 class="tHeading6">Total From Start</h3>
+                     <p id="totalFromStart" class="tHeading2 pTB in">0</p>
+                     <p id="totalFromStartLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="totalFromStartProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="totalFromStartProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-                  <div id="inpRowLastNameRoot" class="p2 pTB">
-                     <label class="tLabel" for="inpRowLastName">Last name</label>
-                     <input id="inpRowLastName" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+               </div>
+               <div class="flex p">
+                  <div class="card drop">
+                     <h3 class="tHeading6">Brought Forward</h3>
+                     <p id="broughtForward" class="tHeading2 pTB in">0</p>
+                     <p id="broughtForwardLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="broughtForwardProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="broughtForwardProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-                  <div id="inpRowJobTitleRoot" class="p2 pTB">
-                     <label class="tLabel" for="inpRowJobTitle">Job title</label>
-                     <input id="inpRowJobTitle" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  <div class="card drop">
+                     <h3 class="tHeading6">New Claims</h3>
+                     <p id="newClaims" class="tHeading2 pTB in">0</p>
+                     <p id="newClaimsLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="newClaimsProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="newClaimsProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-                  <div id="inpRowEmailRoot" class="p2 pTB">
-                     <label class="tLabel" for="inpRowEmail">Email</label>
-                     <input id="inpRowEmail" class="input tInput" type="email" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  <div class="card drop">
+                     <h3 class="tHeading6">Prev. Backlog</h3>
+                     <p id="prevBacklog" class="tHeading2 pTB in">0</p>
+                     <p id="prevBacklogLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="prevBacklogProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="prevBacklogProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-                  <div id="selRowDepartmentRoot" class="selectBtnRoot tL p2 pTB">
-                     <label class="tLabel" for="selRowDepartment">Department</label>
-                     <span class="tBody" role="presentation"></span>
-                     <select id="selRowDepartment" class="selectBtn" tabindex="0">
-                     </select>
+                  <div class="card drop">
+                     <h3 class="tHeading6">Re-Opened in Month</h3>
+                     <p id="reopenedInMonth" class="tHeading2 pTB in">0</p>
+                     <p id="reopenedInMonthLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="reopenedInMonthProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="reopenedInMonthProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-                  <div id="inpRowNameRoot" class="p2 pTB">
-                     <label class="tLabel" for="inpRowName">Name</label>
-                     <input id="inpRowName" class="input tInput" type="text" autocapitalize="off" autocomplete="empty" tabindex="0">
+                  <div class="card drop">
+                     <h3 class="tHeading6">Closed</h3>
+                     <p id="closed" class="tHeading2 pTB in">0</p>
+                     <p id="closedLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="closedProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="closedProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-                  <div id="selRowLocationRoot" class="selectBtnRoot tL p2 pTB">
-                     <label class="tLabel" for="selRowLocation">Location</label>
-                     <span class="tBody" role="presentation"></span>
-                     <select id="selRowLocation" class="selectBtn" tabindex="0">
-                     </select>
+                  <div class="card drop">
+                     <h3 class="tHeading6">Carried Forward</h3>
+                     <p id="carriedForward" class="tHeading2 pTB in">0</p>
+                     <p id="carriedForwardLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="carriedForwardProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="carriedForwardProgressB" class="progressBar"><div class="progress alt"></div></div>
                   </div>
-               </form>
-            </section> -->
+               </div>
+               <div class="flex p">
+                  <div class="card drop">
+                     <h3 class="tHeading6">Settled at £0 (Closed)</h3>
+                     <p id="settledAt" class="tHeading2 pTB in">0</p>
+                     <p id="settledAtLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="settledAtProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="settledAtProgressB" class="progressBar"><div class="progress alt"></div></div>
+                  </div>
+                  <div class="card drop">
+                     <h3 class="tHeading6">Settled Claims (Closed)</h3>
+                     <p id="settledClaims" class="tHeading2 pTB in">0</p>
+                     <p id="settledClaimsLast" class="tInput mL in">+0 (previous)</p>
+                     <div id="settledClaimsProgressA" class="progressBar"><div class="progress"></div></div>
+                     <div id="settledClaimsProgressB" class="progressBar"><div class="progress alt"></div></div>
+                  </div>
+               </div>
+            </div>
          </main>
+         
       </div>
       <script defer src="lib/jquery-3.5.1/jquery.min.js"></script>
+      <script defer src="lib/chart.js/dist/Chart.bundle.min.js"></script>
       <script defer src="js/index.js"></script>
    </body>
 </html>

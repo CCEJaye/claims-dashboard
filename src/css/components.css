@@ -39,6 +39,57 @@
    transition-duration: 0ms;
 }
 
+.in {
+   display: inline-block;
+}
+
+.overflowY {
+   overflow-y: auto;
+}
+
+.flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-content: center;
+}
+
+   .flex * {
+      flex-grow: 1;
+   }
+
+.card {
+   width: 24rem;
+   border-radius: 0.5rem;
+   background: var(--secondary3);
+   margin: 1rem;
+   padding: 2rem;
+}
+
+
+
+.progressBar {
+   --progress: var(--positive);
+   height: 0.6rem;
+   width: 100%;
+   background: var(--secondary1);
+   border-radius: 0.3rem;
+}
+
+   .progressBar .progress {
+      height: 100%;
+      width: 50%;
+      background: var(--progress);
+      border-radius: 0.3rem;
+      transition-duration: var(--slow);
+   }
+
+   .progressBar .progress.alt {
+      --progress: var(--neutral);
+   }
+
+
+
 
 
 
@@ -254,7 +305,7 @@
 
 
 .drop {
-    filter: drop-shadow(0 0 0.2rem var(--shadow));
+    filter: drop-shadow(0 0.2rem 0.3rem var(--shadow));
 }
 
 .sticky {
@@ -266,6 +317,7 @@
 
 .grid {
     width: 100%;
+    height: 100%;
     display: grid;
         grid-auto-columns: 1fr;
         grid-auto-rows: min-content;
@@ -273,6 +325,7 @@
         align-items: center;
 }
 
+.gxR { grid-auto-rows: 1fr; }
 .gC { grid-auto-flow: column; }
 .gR { grid-auto-flow: row; }
 .g2C { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -290,12 +343,13 @@
 .gGap { gap: 0.5rem; }
 .gGapSmall { gap: 0.1rem; }
 .gCenter { justify-items: center; }
+.gStart { justify-items: start; }
+.gEnd { justify-items: end; }
 .gcStart { justify-self: start; }
 .gcEnd { justify-self: end; }
 .gcTop { align-self: start; }
 .gcMiddle { align-self: center; }
 
-.gCenter { justify-items: center; }
 
 .p4 { padding: 4rem; }
 .p4L { padding-left: 4rem; }
@@ -352,21 +406,25 @@
 .bB { border-bottom: 0.1rem solid var(--primary); }
 .bT { border-top: 0.1rem solid var(--primary); }
 
+.m { margin: 1rem; }
+.mT { margin-top: 1rem; }
+.mR { margin-right: 1rem; }
+.mB { margin-bottom: 1rem; }
+.mL { margin-left: 1rem; }
+.m2 { margin: 2rem; }
+.m2T { margin-top: 2rem; }
+.m2R { margin-right: 2rem; }
+.m2B { margin-bottom: 2rem; }
+.m2L { margin-left: 2rem; }
+.mhL { margin-left: 0.5rem; }
 .mLR {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-.mR { margin-right: 1rem; }
-.m2R { margin-right: 1rem; }
-.m2L { margin-left: 1rem; }
 .m2LR {
     margin-right: 2rem;
     margin-left: 2rem;
 }
-.mT { margin-top: 1rem; }
-.m2B { margin-bottom: 2rem; }
-.m { margin: 1rem; }
-.m2 { margin: 2rem; }
 
 .centered {
     position: absolute;

@@ -40,11 +40,11 @@
 
 session_set_cookie_params([
 	"lifetime" => 60,
-	"path" => "/company-directory/",
+	"path" => "/claims-dashboard/",
 	"domain" => "charlesjaye.uk",
 	"secure" => true,
 	"httponly" => true,
-	"samesite" => Strict
+	"samesite" => "Strict"
 ]);
 session_start();
 
@@ -115,7 +115,7 @@ try
 // if any queries fail
 if (array_reduce($output, function($carry, $i) { return $carry || !$i["success"]; }))
 {
-	error_log("Request failed");
+   error_log("Request failed");
 	respond("400", "Request failed", $startTime, $output);
 	return;
 }

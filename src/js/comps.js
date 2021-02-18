@@ -4,8 +4,6 @@
         $(".selectBtn").on("change", function() {
             const childCount = $(this).children("option").length;
             const selected = $(this).val();
-            console.log(selected);
-            console.log(childCount);
             let value = "";
             if (!Array.isArray(selected)) {
                 value = $(this).children(`option[value="` + selected + `"]`).html() || selected;
@@ -44,42 +42,6 @@
             $(this).children("span:last-of-type").html($(this).data(isOn ? "off" : "on"));
             $(this).data("is-on", !isOn);
         });
-    }
-
-    Comps.setLoading = () => {
-        $(".loader").removeClass("run finish error");
-        $(".loader").delay(50).addClass("run");
-    }
-    
-    Comps.setFinished = () => {
-        $(".loader").removeClass("run finish error");
-        $(".loader").delay(50).addClass("finish");
-    }
-    
-    Comps.setError = () => {
-        $(".loader").removeClass("run finish error");
-        $(".loader").delay(50).addClass("error");
-    }
-
-    Comps.setSelect = (selector = "", value = "") => {
-        $(selector).val(value).trigger("change");
-    }
-
-    Comps.updateSelect = (selector = "", values = [], selected = []) => {
-        const ele = $(selector);
-        console.log(ele);
-        ele.html(values).val(selected).trigger("change");
-        console.log(selector);
-        console.log(values);
-        console.log(selected);
-    }
-
-    Comps.setToggle = (selector = "", isOn = true) => {
-        $(selector).data("is-on", !isOn).trigger("click");
-    }
-
-    Comps.toggle = (selector = "") => {
-        $(selector).trigger("click");
     }
 
 }(window.Comps = window.Comps || {}, jQuery));

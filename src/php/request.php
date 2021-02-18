@@ -1,3 +1,3 @@
 <?php
-	require __DIR__ . "/../../../scripts/company-directory/cd.php";
+	require __DIR__ . "/../../../scripts/claims-dashboard/claimsdashboard.php";
 ?>

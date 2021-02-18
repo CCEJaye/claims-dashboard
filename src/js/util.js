@@ -9,6 +9,17 @@
         });
     }
 
+    Util.findWhere = (list = {}, searchKey = "", searchValue) => {
+       const keys = Object.keys(list);
+       for (let i = 0; i < keys.length; i++) {
+          const item = list[keys[i]];
+          if (item[searchKey] == searchValue) {
+             return item;
+          }
+       }
+       return false;
+    }
+
     Util.mapUnique = (list = [], fn = (i) => {}) => {
         const uniques = [];
         for (let i = 0; i < list.length; i++) {
